@@ -1,0 +1,48 @@
+.landing {
+  text-align: center;
+  width: 100%;
+  min-height: 100vh;
+  background-image: url('img/london.jpg');
+  background-size: cover;
+  background-position: center;
+  background-color: rgba(0, 0, 0, 0.5);
+  background-blend-mode: overlay;
+  padding: 40px 3%;
+  box-sizing: border-box;
+}
+
+.landing h1 {
+  margin: 0;
+  padding: 0;
+  color: #fff;
+  margin-bottom: 40px;
+  font-size: 3rem;
+}
+
+.wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  width: 60%;
+  margin: 60px auto;
+}
+
+.wrapper a {
+  display: block;
+  color: #fff;
+  text-decoration: none;
+  font-size: 1rem;
+  padding: 20px;
+  background-color: #7d7c7c;
+  width: 50%;
+  max-width: 300px;
+  margin-bottom: 20px;
+  box-shadow: 1px 3px 6px rgba(0, 0, 0, 0.2);
+  transition: all 0.2s ease-in;
+}
+
+.wrapper a:hover {
+  box-shadow: none;
+  background-color: #2d2d2d;
+}
+
