@@ -1,0 +1,9 @@
+.status-card {
+  flex-basis: 25%;
+  padding: 20px;
+  margin-bottom: 20px;
+}
+
+.status-card-reason {
+  font-size: 14px;
+}

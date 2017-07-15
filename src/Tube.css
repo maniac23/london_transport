@@ -1,0 +1,6 @@
+.tube-wrapper {
+  padding: 60px 5%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}

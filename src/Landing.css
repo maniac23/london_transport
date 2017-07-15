@@ -2,13 +2,6 @@
   text-align: center;
   width: 100%;
   min-height: 100vh;
-  background-image: url('img/london.jpg');
-  background-size: cover;
-  background-position: center;
-  background-color: rgba(0, 0, 0, 0.5);
-  background-blend-mode: overlay;
-  padding: 40px 3%;
-  box-sizing: border-box;
 }
 
 .landing h1 {
