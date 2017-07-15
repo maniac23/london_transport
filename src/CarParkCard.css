@@ -1,0 +1,15 @@
+.car-park-card {
+  padding: 20px;
+  background-color: #eee;
+  flex-basis: 25%;
+  margin-bottom: 20px;
+}
+
+.capacity-wrapper {
+  display: flex;
+  justify-content: space-around;
+}
+
+.car-park-card span {
+  font-weight: bold;
+}

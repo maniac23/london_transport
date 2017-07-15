@@ -3,6 +3,7 @@ import './App.css';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import Landing from './Landing';
 import Tube from './Tube';
+import CarParks from './CarParks';
 
 const FourOhFour = () => <h1>404</h1>;
 
@@ -12,6 +13,7 @@ const App = () => (
       <Switch>
         <Route exact path="/" component={Landing} />
         <Route path="/tube" component={Tube} />
+        <Route path="/carparks" component={CarParks} />
         <Route component={FourOhFour} />
       </Switch>
     </div>

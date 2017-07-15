@@ -7,7 +7,7 @@ const Landing = () => (
     <h1>London transport system</h1>
     <div className="wrapper">
       <Link to="/tube">Check Tube status</Link>
-      <Link to="/search">Check Buses status</Link>
+      <Link to="/carparks">Check Car parks occupancy</Link>
       <Link to="/search">Check Buses status</Link>
       <Link to="/search">Check Buses status</Link>
     </div>
