@@ -1,12 +1,14 @@
 import React, { Component } from 'react';
 import axios from 'axios';
 import RoadCard from './RoadCard';
-import { Link } from 'react-router-dom';
 import Map from './Map';
+import GoBack from './GoBack';
+import Loader from './Loader';
 import './Roads.css';
 
 class Roads extends Component {
   state = {
+    loading: true,
     roadsStatus: [],
     markers: []
   };
@@ -20,43 +22,46 @@ class Roads extends Component {
               position: JSON.parse(item.point)
             }
           })
-        })
+        });
         this.setState({ roadsStatus: response.data });
+        this.setState({ loading: false });
       });
   }
   
   render() {
-    return (
-      <div>
+    if (this.state.loading === true) {
+      return (<Loader />);
+    } else {
+      return (
         <div>
-          <Link to="/" className="back-link">&larr; Go back</Link>
-        </div>
-        <div className="tube-wrapper">
-          <ul className="roads-list">
-            {this.state.roadsStatus.map(item => {
-              const endDate = `${new Date(item.endDateTime).getDate()}-${new Date(item.endDateTime).getMonth()}-${new Date(item.endDateTime).getFullYear()}`; // format endDate
+          <GoBack />
+          <div className="tube-wrapper">
+            <ul className="roads-list">
+              {this.state.roadsStatus.map(item => {
+                const endDate = `${new Date(item.endDateTime).getDate()}-${new Date(item.endDateTime).getMonth()}-${new Date(item.endDateTime).getFullYear()}`; // format endDate
 
-              const startDate = `${new Date(item.startDateTime).getDate()}-${new Date(item.startDateTime).getMonth()}-${new Date(item.startDateTime).getFullYear()}`; // format start date
-              
-              return (
-                <RoadCard
-                  key={item.id}
-                  name={item.location}
-                  fromDate={startDate}
-                  toDate={endDate}
-                />
-              )
-            }
-            )}
-          </ul>
-          <div className="map">
-            <Map
-              markers={this.state.markers}
-            />
-          </div> 
-        </div> 
-      </div>  
-    )
+                const startDate = `${new Date(item.startDateTime).getDate()}-${new Date(item.startDateTime).getMonth()}-${new Date(item.startDateTime).getFullYear()}`; // format start date
+                
+                return (
+                  <RoadCard
+                    key={item.id}
+                    name={item.location}
+                    fromDate={startDate}
+                    toDate={endDate}
+                  />
+                )
+              }
+              )}
+            </ul>
+            <div className="map">
+              <Map
+                markers={this.state.markers}
+              />
+            </div>
+          </div>
+        </div>
+      )
+    }          
   }
 }
 
