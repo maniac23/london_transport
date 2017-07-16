@@ -31,10 +31,10 @@ class Map extends Component {
     return (
       <MyGoogleMap
         containerElement={
-          <div style={{ height: `100vh` }} />
+          <div style={{ height: `90vh` }} />
         }
         mapElement={
-          <div style={{ height: `100vh` }} />
+          <div style={{ height: `90vh` }} />
         }
         center={this.state.center}
         markers={this.props.markers}
