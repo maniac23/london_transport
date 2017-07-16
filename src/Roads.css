@@ -1,0 +1,9 @@
+.roads-list {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  flex-basis: 30%;
+  border: 1px solid;
+  max-height: 100vh;
+  overflow-y: auto;
+}

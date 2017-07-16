@@ -1,0 +1,19 @@
+.road-card {
+  padding: 10px;
+  background-color: #eee;
+  border-bottom: 1px solid #000;
+}
+
+.road-card h2 {
+  font-size: 1.25rem;
+  margin-bottom: 10px;
+}
+
+.road-card > div {
+  display: flex;
+  justify-content: space-around;
+}
+
+.road-card span {
+  font-weight: bold;
+}
