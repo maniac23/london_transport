@@ -41,14 +41,15 @@ class CarParks extends Component {
                 item.name.toUpperCase().indexOf(this.state.searchTerm.toUpperCase()) >= 0)
               .map(item => {
                 const capacity = item.bays
-                  .filter(bay => bay.bayType !== 'Disabled') // filtering 'disabled' car bays
+                  .filter(bay => bay.bayType !== 'Disabled'); // filtering 'disabled' car bays
+                console.log(capacity)
                 return (
                   <CarParkCard
                     key={item.id}
                     name={item.name}
-                    capacity={capacity[0].bayCount}
-                    occupied={capacity[0].occupied}
-                    free={capacity[0].free}
+                    capacity={capacity[0] ? capacity[0].bayCount : 0}
+                    occupied={capacity[0] ? capacity[0].occupied : 0}
+                    free={capacity[0] ? capacity[0].free: 0}
                   />
                 )
               }
